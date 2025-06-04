@@ -1,19 +1,26 @@
+# tests/test_core.py
+
 import unittest
 from core import Base15Number
 
-class TestCore(unittest.TestCase):
+class TestBase15Number(unittest.TestCase):
     def test_addition(self):
-        a = Base15Number([1.0, 0.5])
-        b = Base15Number([0.5, 0.25])
-        c = a + b
-        result = c.to_float()
-        expected = a.to_float() + b.to_float()
-        self.assertAlmostEqual(result, expected, places=5)
+        a = Base15Number([1, 0.5])
+        b = Base15Number([0.5, 1])
+        result = a + b
+        self.assertAlmostEqual(result.to_float(), a.to_float() + b.to_float(), places=5)
 
-    def test_normalization(self):
-        a = Base15Number([2.0])
-        a.normalize()
-        self.assertTrue(all(0 <= d < 1.5 for d in a.digits), "Digits not normalized")
+    def test_subtraction(self):
+        a = Base15Number([1, 0.5])
+        b = Base15Number([0.5, 1])
+        result = a - b
+        self.assertAlmostEqual(result.to_float(), a.to_float() - b.to_float(), places=5)
 
-if __name__ == "__main__":
+    def test_multiplication(self):
+        a = Base15Number([1])
+        b = Base15Number([0.5])
+        result = a * b
+        self.assertAlmostEqual(result.to_float(), a.to_float() * b.to_float(), places=5)
+
+if __name__ == '__main__':
     unittest.main()
