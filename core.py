@@ -1,9 +1,9 @@
+
 """
 core.py
 """
 
 from typing import List, Optional
-
 
 class Base15Number:
     """
@@ -22,7 +22,6 @@ class Base15Number:
             self.digits[i] += carry
             carry = int(self.digits[i] // 1.5)
             self.digits[i] %= 1.5
-
             if self.digits[i] < 0:
                 self.digits[i] += 1.5
                 carry -= 1
@@ -31,7 +30,6 @@ class Base15Number:
             self.digits.insert(0, carry % 1.5)
             carry = int(carry // 1.5)
 
-        # Remove leading zeros while keeping at least one digit
         while len(self.digits) > 1 and self.digits[0] == 0:
             self.digits.pop(0)
 
@@ -47,9 +45,8 @@ class Base15Number:
         digits = []
         remaining = abs(x)
         for _ in range(precision):
-            d = int(remaining // 1.5)
-            digits.append(d)
-            remaining = (remaining - d) * 1.5
+            digits.append(int(remaining % 1.5))
+            remaining = int(remaining // 1.5)
             if remaining == 0:
                 break
         if x < 0:
@@ -78,4 +75,4 @@ class Base15Number:
         return Base15Number(result)
 
     def __repr__(self) -> str:
-        return f"Base15Number({self.digits}) ˜ {self.to_float():.4f}"
+        return f"Base15Number({self.digits}) ~ {self.to_float():.4f}"
