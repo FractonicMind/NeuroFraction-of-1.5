@@ -81,4 +81,4 @@ class Base15Number:
         return Base15Number(result)
 
     def __repr__(self) -> str:
-        return f"Base15Number({self.digits}) � {self.to_float():.4f}"
+        return f"Base15Number({self.digits}) Ëœ {self.to_float():.4f}"
