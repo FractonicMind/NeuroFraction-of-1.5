@@ -1,9 +1,5 @@
 """
 core.py
-
-This module defines the Base15Number class, which implements
-fractional-base (1.5) arithmetic with support for normalization,
-conversion to decimal, and basic arithmetic operations.
 """
 
 from typing import List, Optional
@@ -26,7 +22,7 @@ class Base15Number:
             self.digits[i] += carry
             carry = int(self.digits[i] // 1.5)
             self.digits[i] %= 1.5
-            # Handle negatives
+
             if self.digits[i] < 0:
                 self.digits[i] += 1.5
                 carry -= 1
@@ -51,8 +47,9 @@ class Base15Number:
         digits = []
         remaining = abs(x)
         for _ in range(precision):
-            digits.append(remaining % 1.5)
-            remaining = int(remaining // 1.5)
+            d = int(remaining // 1.5)
+            digits.append(d)
+            remaining = (remaining - d) * 1.5
             if remaining == 0:
                 break
         if x < 0:
@@ -81,4 +78,4 @@ class Base15Number:
         return Base15Number(result)
 
     def __repr__(self) -> str:
-        return f"Base15Number({self.digits}) Ëœ {self.to_float():.4f}"
+        return f"Base15Number({self.digits}) ˜ {self.to_float():.4f}"
