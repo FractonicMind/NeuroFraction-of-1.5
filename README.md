@@ -160,7 +160,7 @@ See our Contribution Guidelines for details.
 
 ## 📜 License
 
-This project is licensed under the MIT License — see the <a href=https://github.com/FractonicMind/NeuroFraction-of-1.5/blob/main/LICENSE>LICENSE</a> file for details.
+This project is licensed under the MIT License — see the <a href="https://github.com/FractonicMind/NeuroFraction-of-1.5/blob/main/LICENSE">LICENSE</a> file for details.
 
 ---
 
