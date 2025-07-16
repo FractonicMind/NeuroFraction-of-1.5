@@ -1,6 +1,6 @@
 # NeuroFraction-of-1.5
 
-🚀 **Fractional-Base Neural Networks**  
+**Fractional-Base Neural Networks**  
 A radical departure from binary computation using base-1.5 arithmetic.
 
 **Python 3.8+ | License: MIT**
@@ -19,7 +19,7 @@ A radical departure from binary computation using base-1.5 arithmetic.
 
 ---
 
-## 🧰 Hardware Requirements
+## Hardware Requirements
 
 | Component     | Minimum                 | Recommended       |
 |---------------|-------------------------|-------------------|
@@ -53,7 +53,7 @@ pip install -e .[gpu]     # For GPU support
 
 ---
 
-## 🚀 Usage Examples
+## Usage Examples
 
 ### Basic Tensor Operations
 ```
@@ -85,7 +85,7 @@ for x, y in loader:
 
 ---
 
-## 📊 Benchmarks
+## Benchmarks
 
 **Performance Comparison (A100 80GB)**
 
@@ -97,7 +97,7 @@ for x, y in loader:
 
 ---
 
-## 🔌 FPGA Implementation
+## FPGA Implementation
 
 ### Current Status
 ```verilog
@@ -122,7 +122,7 @@ endmodule
 
 ---
 
-## 🤝 Contributing
+## Contributing
 
 1. Fork the repository  
 2. Create your feature branch:
@@ -143,7 +143,7 @@ See our Contribution Guidelines for details.
 
 ---
 
-## 📝 Citation
+## Citation
 
 ```
 @software{NeuroFraction2024,
@@ -158,13 +158,13 @@ See our Contribution Guidelines for details.
 
 ---
 
-## 📜 License
+## License
 
 This project is licensed under the MIT License — see the <a href="https://github.com/FractonicMind/NeuroFraction-of-1.5/blob/main/LICENSE">LICENSE</a> file for details.
 
 ---
 
-## 🌟 Contributors
+## Contributors
 
 <a href="https://github.com/NeuroFraction-of-1.5/undefined/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=NeuroFraction-of-1.5/undefined" />
@@ -174,4 +174,3 @@ _Made with [contrib.rocks](https://contrib.rocks)._
 
 ---
 
-Let’s build the future together — one fraction at a time! 🚀
